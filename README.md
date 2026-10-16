@@ -13,6 +13,8 @@ class DiagnosisAgent:
 
         else:
             return "Penyebab masalah belum diketahui."
+
+
 class RecommendationAgent:
     def proses(self, diagnosis):
         if "pendinginan" in diagnosis:
@@ -23,6 +25,8 @@ class RecommendationAgent:
             return "Periksa kabel dan sumber daya komputer."
         else:
             return "Periksa gejala lain untuk diagnosis lanjutan."
+
+
 class RouterAgent:
     def _init_(self):
         self.diagnosis_agent = DiagnosisAgent()
@@ -36,7 +40,9 @@ class RouterAgent:
 
         rekomendasi = self.recommendation_agent.proses(diagnosis)
         print("[Recommendation Agent]", rekomendasi)
-        def main():
+
+
+def main():
     print("=== MULTI-AGENT SYSTEM ===")
     pesan = input("Jelaskan masalah komputer: ").strip()
 
